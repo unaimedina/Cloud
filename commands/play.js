@@ -22,12 +22,8 @@ module.exports = {
       let song = await queue.play(args.join(" ")).catch((_) => {
         if (!client.guildQueue) queue.stop();
       });
-  
-      let getQueue = client.player.getQueue(message.guild.id);
-    }
-    
-/*
-    const exampleEmbed = new Discord.MessageEmbed()
+
+      const exampleEmbed = new Discord.MessageEmbed()
       .setColor("#0099ff")
       .setTitle("NEW SONG ADDED!")
       .setThumbnail(client.user.avatarURL())
@@ -44,6 +40,8 @@ module.exports = {
     await message.channel.send("Queue:");
     // for (var x = 0; x < queue.songs.length; x++) await message.channel.send(queue.songs[x] + ".");
 
-    message.channel.send({ embeds: [exampleEmbed] });*/
+    message.channel.send({ embeds: [exampleEmbed] });
+    }
+    
   },
 };
