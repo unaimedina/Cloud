@@ -9,7 +9,9 @@ module.exports = (client, message) => {
 
     const cmd = client.commands.get(command);
 
+    const guildQueue = client.player.getQueue(message.guild.id);
+
     if (!cmd) return;
   
-    cmd.run(client, message, args);
+    cmd.run(client, message, args, guildQueue);
   };
