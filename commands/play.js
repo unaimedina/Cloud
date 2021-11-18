@@ -21,7 +21,15 @@ module.exports = {
 
       const embed = new Discord.MessageEmbed()
         .setColor("#0099ff")
+<<<<<<< HEAD
         .setTitle("NEW PLAYLIST ADDED!")
+=======
+<<<<<<< HEAD
+        .setTitle("NUEVA PLAYLIST AÑADIDA!")
+=======
+        .setTitle("NEW PLAYLIST ADDED!")
+>>>>>>> 483a116bbf42b24f66c005d4acd77ecfe954fd23
+>>>>>>> Added command clerqueue and shuffle
         .setThumbnail(client.user.avatarURL())
         .addFields(
           { name: "Nombre:", value: song.name },
@@ -30,7 +38,15 @@ module.exports = {
         )
         .setTimestamp()
         .setFooter(
+<<<<<<< HEAD
           "Song added by " + message.author.username,
+=======
+<<<<<<< HEAD
+          "Playlist añadida por " + message.author.username,
+=======
+          "Song added by " + message.author.username,
+>>>>>>> 483a116bbf42b24f66c005d4acd77ecfe954fd23
+>>>>>>> Added command clerqueue and shuffle
           message.author.avatarURL()
         );
 
@@ -46,6 +62,7 @@ module.exports = {
 
       const embed = new Discord.MessageEmbed()
         .setColor("#0099ff")
+<<<<<<< HEAD
         .setTitle("NEW SONG ADDED!")
         .setThumbnail(client.user.avatarURL())
         .addFields(
@@ -55,6 +72,17 @@ module.exports = {
         .setTimestamp()
         .setFooter(
           "Song added by " + message.author.username,
+=======
+        .setTitle("¡NUEVA CANCION AÑADIDA!")
+        .setThumbnail(client.user.avatarURL())
+        .addFields(
+          { name: "Canción:", value: song.name },
+          { name: "Duración:", value: song.duration }
+        )
+        .setTimestamp()
+        .setFooter(
+          "Canción añadida por " + message.author.username,
+>>>>>>> Added command clerqueue and shuffle
           message.author.avatarURL()
         );
 
@@ -69,9 +97,23 @@ function convert(duration) {
     minutes = Math.floor((duration / (1000 * 60)) % 60),
     hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    return hours + ":" + minutes + ":" + seconds;
+=======
+>>>>>>> Added command clerqueue and shuffle
   hours = (hours < 10) ? "0" + hours : hours;
   minutes = (minutes < 10) ? "0" + minutes : minutes;
   seconds = (seconds < 10) ? "0" + seconds : seconds;
 
   return hours + ":" + minutes + ":" + seconds;
+<<<<<<< HEAD
+=======
+>>>>>>> 483a116bbf42b24f66c005d4acd77ecfe954fd23
+>>>>>>> Added command clerqueue and shuffle
 }
