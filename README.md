@@ -2,7 +2,7 @@
 > Node.js Discord bot orientado a suplir necesidades con la caída de varios bots de música recientemente.
 
 ## Información
-- **Versión:** 0.5-SNAPSHOT_BETA
+- **Versión:** 1.0-BETA
 - **Author:** Moonly
 - **Language:** Node.js v16
 
