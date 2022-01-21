@@ -5,11 +5,12 @@ module.exports = {
     alias: [],
     descripcion: "Borra la cola.",
     run: async (client, message, args, guildQueue) => {
-        const embed = new Discord.MessageEmbed()
-        .setDescription("La cola ha sido borrada!")
-        .setTimestamp();
-        
-        guildQueue.clearQueue();
-        message.channel.send(embed);
+        message.delete();
+        if (!guildQueue) message.reply("No hay cola!");
+        else {
+          guildQueue.clearQueue();
+          
+          message.channel.send("> La cola ha sido borrada!");
+        }
     },
 };

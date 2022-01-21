@@ -1,5 +1,9 @@
+const mySecret = process.env['TOKEN']
 const Discord = require("discord.js");
 const fs = require("fs");
+
+const alive = require("./alive.js");
+
 const client = new Discord.Client({
   intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_VOICE_STATES"],
 });
@@ -46,7 +50,7 @@ client.player.on('playlistAdd', (queue, playlist) =>
   playlist_var = playlist
 )
 
-/* PLAYER EVENTS */
+/* PLAYER EVENTS 
 client.player
   // Emitted when channel was empty.
   .on("channelEmpty", (queue) =>
@@ -78,6 +82,6 @@ client.player
   // Emitted when there was an error in runtime
   .on("error", (error, queue) => {
     console.log(`Error: ${error} in ${queue.guild.name}`);
-  });
+  });*/
 
-client.login(config.TOKEN);
+client.login(mySecret);

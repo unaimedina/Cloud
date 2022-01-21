@@ -5,6 +5,7 @@ module.exports = {
   alias: [],
   descripcion: "Muestra la cola de canciones.",
   run: async (client, message, args, guildQueue) => {
+    message.delete();
     if (guildQueue != null) {
       message.channel.send("> **COLA:**");
       for (var x = 0; x < guildQueue.songs.length; x++) {
