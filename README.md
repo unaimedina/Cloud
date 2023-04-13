@@ -14,4 +14,3 @@
 - **queue** - Muestra la cola.
 
 ## Instalación
-> Proximamente, perra.
